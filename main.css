@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100..700&display=swap');
+
+#not_found {
+
+    text-align:center;
+
+}
+
+body {
+    background:black;
+    color: rgb(220, 220, 220);
+    font-family: "Signika", sans-serif;
+    margin:0px;
+    padding:0px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(192, 192, 192);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(117, 117, 117);
+}
+
+input { border-radius:5px; padding:5px;}
+
+a {
+  text-decoration:none;
+  background-color:black;
+  color:white;
+  transition:0.2s;
+}
+
+a:hover {
+  transition:0.2s;
+  background-color:white;
+  color:black;
+}
+
+.button {
+  background-color:black;
+  color:white;
+  transition:0.2s;
+  cursor:pointer;
+}
+
+.button:hover {
+  transition:0.2s;
+  background-color:white;
+  color:black;
+}
