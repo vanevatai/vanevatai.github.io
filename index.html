@@ -3,70 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vanevatai</title>
+  <title>Currículo Virtual</title>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" type="text/css" href="toolbox.css">
 </head>
 <body>
 
 <div id="main">
 
-    <div id="toolbar">
-
-        <div class="button"></div>
-        <div id="display">
-        </div>
+    <div id="navbar">
+        <a href="#" class="button">Sobre mim</a><span class="divider">✦</span>
+        <a href="formacao.html" class="button">Formação</a><span class="divider">✦</span>
+        <a href="portfolio.hmtl" class="button">Portfólio</a><span class="divider">✦</span>
+        <a href="contato.html" class="button">Contato</a>
     </div>
 
     <div id="screen">
+        <div id="content"> 
+        <img src="foto.jpg" id="photo">
+        <h1>Sobre mim</h1>
+        <div style="width:60%; text-align: justify;">
+        <h2 class="resize" >
+            - Meu nome é Matheus Mouzinho Porto, natural do estado de Rio de Janeiro, tenho 22 anos
+            e estou atualmente cursando Ciência da Computação na Uninter. Sempre tive afinidade com 
+            tecnologia desde pequeno, especialmente com programas de jogos eletrônicos e de rede, 
+            a sensação de bater a cabeça até enfim obter a satisfação de ver algo funcionando é uma 
+            que nunca perde o brilho para mim. Atualmente, trabalho como T.I em uma empresa de 
+            telecomunicações e coloco minhas capacidades de progamação em prática sempre que 
+            encontro a oportunidade. No meu tempo livre eu estudo para melhorar minhas habilidades 
+            de programação, jogo jogos eletrônicos e leio bastante.
+        </h2>
+        </div>
+        </div>
     </div>
 
 </div>
-
-<script src="pages/scripts/main.js"></script>
-<script>
-
-const toolbar  = document.getElementById("toolbar"),
-       screen  = document.getElementById("screen"),
-       display = document.getElementById("display"),
-       online  = document.getElementById("pppoe_on"),
-       offline = document.getElementById("pppoe_off");
-
-let buttons = toolbar.getElementsByClassName("button"),
-
-    onlineCount  = 0,
-    offlineCount = 0,
-    
-    back = buttons[0],
-    list = buttons[1];
-
-       back.destination = "";
-       list.destination = "pages/toolbox/offline_list";
-
-function updateScreen(locate) {
-
-    ajax("GET", locate.destination).then(function(result) {
-    
-        displayData("screen",result);
-
-    })
-
-}
-
-function toDestination() {
-
-    window.location = event.target.destination;
-
-}
-
-offline.addEventListener("click", updateScreen);
-
- // Função irá por padrão puxar a lista de offline
-updateScreen(list)
-// Callback em intervalo irá atualizar periódicamente a lista
-setInterval(function() { updateScreen(list) }, 8000);
-
-</script>
 
 </body>
 </html>
